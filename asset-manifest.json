@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Drip-store/static/css/main.95f8bb31.css",
-    "main.js": "/Drip-store/static/js/main.ac7e7c0e.js",
+    "main.js": "/Drip-store/static/js/main.48a72b10.js",
     "static/media/logo-header.svg": "/Drip-store/static/media/logo-header.060a5a7140d39088e3ff71a39e3e7ad6.svg",
     "static/media/logo-footer.svg": "/Drip-store/static/media/logo-footer.e82c226c4ea85e2b135adaaaf4cd1978.svg",
     "static/media/mini-cart.svg": "/Drip-store/static/media/mini-cart.a7ab1404d63d537d38784b4fc61391ab.svg",
     "index.html": "/Drip-store/index.html",
     "main.95f8bb31.css.map": "/Drip-store/static/css/main.95f8bb31.css.map",
-    "main.ac7e7c0e.js.map": "/Drip-store/static/js/main.ac7e7c0e.js.map"
+    "main.48a72b10.js.map": "/Drip-store/static/js/main.48a72b10.js.map"
   },
   "entrypoints": [
     "static/css/main.95f8bb31.css",
-    "static/js/main.ac7e7c0e.js"
+    "static/js/main.48a72b10.js"
   ]
 }
