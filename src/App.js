@@ -6,11 +6,14 @@ import ProductListingPage from './pages/ProductListingPage';
 import ProductViewPage from './pages/ProductViewPage';
 import CategoriesPage from './pages/CategoriesPage';
 import OrdersPage from './pages/OrdersPage';
+import { HashRouter as Router } from 'react-router-dom';
+
 
 function App() {
   return (
     <Layout>
       <Routes>
+        <Router basename={process.env.PUBLIC_URL}>
         <Route path="/" element={<HomePage />} />
         <Route path="/products" element={<ProductListingPage />} />
         <Route path="/product/:id" element={<ProductViewPage />} />
