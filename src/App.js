@@ -1,16 +1,23 @@
 import React from 'react';
-import Header from './components/Header';
+import { Routes, Route } from 'react-router-dom';
+import Layout from './pages/Layout';
+import HomePage from './pages/HomePage';
+import ProductListingPage from './pages/ProductListingPage';
+import ProductViewPage from './pages/ProductViewPage';
+import CategoriesPage from './pages/CategoriesPage';
+import OrdersPage from './pages/OrdersPage';
 
 function App() {
   return (
-    <div className="app">
-      <Header />
-      <main>
-        <h1 style={{color: '#C92071', textAlign: 'center', marginTop: '40px'}}>
-          Página Funcionando!
-        </h1>
-      </main>
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/products" element={<ProductListingPage />} />
+        <Route path="/product/:id" element={<ProductViewPage />} />
+        <Route path="/categories" element={<CategoriesPage />} />
+        <Route path="/orders" element={<OrdersPage />} />
+        </Routes>
+    </Layout>
   );
 }
 

@@ -1,0 +1,73 @@
+/* ProductOptions.css */
+.product-options {
+  margin-bottom: 1.5rem;
+}
+
+.options-title {
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  color: var(--dark-gray);
+  font-weight: 600;
+}
+
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.option {
+  padding: 0;
+  border: 2px solid var(--light-gray-2);
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Estilo para opções de cor (circulares) */
+.option.circle {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+}
+
+/* Estilo para opções de texto (quadradas) */
+.option.square {
+  padding: 0.5rem 1rem;
+  min-width: 40px;
+}
+
+.option.selected {
+  border-color: var(--warning);
+  box-shadow: 0 0 0 2px var(--warning-light);
+}
+
+.option:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Indicador de seleção para cores */
+.option.circle.selected::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.3;
+}
+
+/* Melhor visualização para cores escuras */
+.option.circle[style*="background-color: #000"],
+.option.circle[style*="background-color: #000000"] {
+  border-color: #555;
+}

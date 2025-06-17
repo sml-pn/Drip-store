@@ -1,0 +1,275 @@
+/* BuyBox.css atualizado */
+.buy-box {
+  background-color: var(--white);
+  padding: clamp(16px, 2.5vw, 24px);
+  border-radius: 12px;
+  max-width: min(600px, 90vw);
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 1.8vw, 20px);
+  flex: 1 1 auto;
+  min-width: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--light-gray-3);
+}
+
+.product-header {
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.product-name {
+  font-size: clamp(22px, 2.8vw, 30px);
+  color: var(--dark-gray);
+  margin: 0 0 6px 0;
+  font-weight: 600;
+  line-height: 1.3;
+  word-wrap: break-word;
+}
+
+.product-reference {
+  font-size: 13px;
+  color: var(--dark-gray-3);
+  letter-spacing: 0.5px;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.stars-value {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: var(--white);
+  background-color: var(--warning);
+}
+
+.star-icon {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+}
+
+.rating-count {
+  font-size: 14px;
+  color: var(--light-gray);
+}
+
+.product-pricing {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+
+.price, .discounted-price {
+  font-size: clamp(26px, 3.2vw, 34px);
+  color: var(--dark-gray-2);
+  font-weight: 700;
+}
+
+.original-price {
+  font-size: 18px;
+  color: var(--light-gray-2);
+  text-decoration: line-through;
+}
+
+.product-description {
+  margin-bottom: 22px;
+  overflow: hidden;
+}
+
+.product-description p {
+  font-size: 15px;
+  color: var(--dark-gray-2);
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.product-options {
+  margin-bottom: 20px;
+  max-width: 100%;
+}
+
+.buy-button {
+  width: 100%;
+  padding: 18px;
+  background-color: var(--warning);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.buy-button:hover {
+  background-color: var(--warning-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.buy-button:active {
+  transform: translateY(0);
+}
+
+.buy-button.added {
+  background-color: var(--success);
+  animation: pulse 0.5s ease-in-out;
+}
+
+.buy-button:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.check-icon {
+  display: inline-flex;
+  margin-right: 10px;
+  font-size: 20px;
+  animation: bounce 0.5s ease-in-out;
+}
+
+/* Animações */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .buy-box {
+    padding: 18px;
+    border-radius: 10px;
+  }
+  
+  .product-pricing {
+    gap: 10px;
+  }
+  
+  .buy-button {
+    padding: 16px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .buy-box {
+    padding: 14px;
+    border-radius: 8px;
+    gap: 10px;
+  }
+  
+  .product-name {
+    font-size: 20px;
+  }
+  
+  .price, .discounted-price {
+    font-size: 24px;
+  }
+  
+  .original-price {
+    font-size: 16px;
+  }
+  
+  .product-rating {
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  
+  .product-description p {
+    font-size: 14px;
+  }
+  
+  .buy-button {
+    padding: 14px;
+    font-size: 15px;
+  }
+}
+
+/* BuyBox.css - Ajustes específicos para o componente */
+
+/* Mantenha todas as regras CSS que você já tinha */
+/* Adicionando apenas os ajustes necessários: */
+
+.star-icon {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 14px;
+}
+
+/* Ajuste para a estrutura do product-header */
+.product-header {
+  margin-bottom: 16px;
+}
+
+/* Garantindo que o botão use a classe correta */
+.add-to-cart {
+  /* Mantenha todas as propriedades do .buy-button */
+  width: 100%;
+  padding: 16px;
+  background-color: var(--warning);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-sizing: border-box;
+}
+
+.add-to-cart:hover {
+  background-color: #e69500;
+}
+
+/* Se quiser manter os efeitos especiais */
+.add-to-cart.added {
+  background-color: var(--success);
+  animation: pulse 0.5s ease-in-out;
+}
+
+.add-to-cart:disabled {
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+/* Adicione estas variáveis no seu :root */
+:root {
+  --white: #ffffff;
+  --light-gray: #f5f5f5;
+  --light-gray-2: #e0e0e0;
+  --light-gray-3: #cccccc;
+  --dark-gray: #333333;
+  --dark-gray-2: #444444;
+  --dark-gray-3: #666666;
+  --warning: #ff9800;
+  --warning-dark: #f57c00;
+  --success: #4caf50;
+}

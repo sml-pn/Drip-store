@@ -1,0 +1,14 @@
+/* Estilos ADICIONADOS para telas pequenas (sem modificar os existentes) */
+@media (max-width: 768px) {
+  .logo-container {
+    justify-content: auto;
+    transform: translate(0,-0); /* Centraliza completamente */
+    margin: 0 auto; /* Garante centralização */
+  }
+  
+  .logo-image {
+    width: 250px; /* Largura reduzida */
+    transform: translate(40px, 10px); /* Remove ajuste de posição */
+    padding: 0px; /* Padding reduzido */
+  }
+}

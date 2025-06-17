@@ -1,0 +1,112 @@
+.search-field {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600; /* Aumente este valor conforme necessário */
+}
+
+.search-field input {
+  width: 300px;
+  padding: 15px 5px; /* Aumente o padding vertical/horizontal */
+  font-size: 1.1rem; /* Aumente o tamanho da fonte se desejar */
+  border: 1px solid var(--light-gray-2);
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.search-field input:focus {
+  border-color: var(--primary);
+}
+
+.search-button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  background-color: var(--tertiary);
+}
+
+.search-compact-trigger {
+  background: none;
+  border: none;
+  color: var(--light-gray-2);
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-compact-trigger:hover {
+  color: var(--primary);
+}
+
+.search-compact-expanded {
+  position: absolute;
+  top: 100%;
+  right: -15px;
+  width: 400px;
+  border-radius: 4px;
+  padding: 8px;
+  z-index: 100;
+  margin-top: 2px;
+  display: flex;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.search-compact-expanded input {
+  width: 100%;
+  padding: 12px 5px;
+  border: 1px solid var(--light-gray-2);
+  border-radius: 4px 0 0 4px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-compact-expanded .search-button {
+  padding: 0 15px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .search-field {
+    display: none;
+  }
+  
+  .search-compact-container {
+    display: block;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    right: 15px;
+    top: 50px;
+    transform: translate(-70px, -45px);
+    z-index: 1002;
+  }
+  }
+
+@media (min-width: 769px) {
+  .search-compact-container {
+    display: none;
+  }
+  
+  .search-field {
+    display: flex;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+ .search-button svg {
+  width: 30px;
+  height: 30px;
+}

@@ -1,19 +1,16 @@
-// src/components/Logo/index.jsx
 import React from 'react';
+import logoWhite from '../../assets/images/logo-footer.svg';
+import logoDefault from '../../assets/images/logo-header.svg';
+import './Logo.css';
 
-const Logo = () => {
+const Logo = ({ whiteMode }) => {
   return (
-    <div style={{
-      width: '253px',
-      height: '44px',
-      backgroundColor: '#F5F5F5', // Temporário - substitua pela logo real
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      fontWeight: 'bold',
-      color: '#C92071'
-    }}>
-      DRIP STORE
+    <div className="logo-container">
+      <img 
+        src={whiteMode ? logoWhite : logoDefault} 
+        alt="Digital Store Logo" 
+        className="logo-image"
+      />
     </div>
   );
 };

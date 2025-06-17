@@ -1,15 +1,63 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Cores conforme seu guia */
 :root {
+  /* Cores principais */
   --primary: #C92071;
   --secondary: #B5B6F2;
-  /* Adicione todas as cores do seu style guide */
+  --tertiary: #991956;
+  
+  /* Cores de status */
+  --error: #EE4266;
+  --success: #52CA76;
+  --warning: #F6AA1C;
+  
+  /* Escala de cinza */
+  --dark-gray: #1F1F1F;
+  --dark-gray-2: #474747;
+  --dark-gray-3: #666666;
+  --light-gray: #8F8F8F;
+  --light-gray-2: #CCCCCC;
+  --light-gray-3: #F5F5F5;
+  --white: #FFFFFF;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--dark-gray);
+  background-color: var(--light-gray-3);
+}
+
+/* Corrige o overflow horizontal */
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Impede rolagem horizontal */
+  margin: 0;
+  padding: 0;
+}
+
+/* Container principal */
+.app-container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* ===== RESPONSIVIDADE GLOBAL ===== */
+/* (Adicione estas regras sem modificar as existentes) */
+
+/* Breakpoints baseados em dispositivos comuns */
+@media (max-width: 768px) { /* Tablets */
+  .home-page {
+    padding: 0 15px;
+  }
+  
+  .hero-section, 
+  .collections-section, 
+  .products-section {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) { /* Celulares */
+  .home-page {
+    padding: 0 10px;
+  }
 }

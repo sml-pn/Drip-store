@@ -1,0 +1,31 @@
+.info-section {
+  margin-bottom: 1.5rem;
+}
+
+.info-title {
+  color: var(--white);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-list li {
+  margin-bottom: 0.5rem;
+}
+
+.info-link {
+  color: var(--light-gray-2);
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 0.9rem;
+}
+
+.info-link:hover {
+  color: var(--primary);
+}

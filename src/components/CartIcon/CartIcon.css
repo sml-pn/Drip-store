@@ -1,0 +1,32 @@
+/* 🔘 Estilos DEFAULT (telas grandes) - Mantenha como está */
+.cart-icon {
+  position: relative; /* Padrão para desktop */
+  margin-left: 1rem; /* Ajuste conforme necessário */
+}
+
+/* 📱 Estilos APENAS para mobile (telas pequenas) */
+@media (max-width: 768px) {
+  .cart-icon {
+    /* ✅ Posicionamento FIXO (não interfere nos outros elementos) */
+    position: relative;
+    right: -80px;   /* Distância da direita */
+    top: 5px;     /* Distância do topo */
+    z-index: 1001; /* Garante que fique acima de outros itens */
+    
+    /* ⚠️ Remove transform/margens que podem afetar o posicionamento */
+    transform: none !important;
+    margin: 0 !important;
+  }
+
+  /* Ajuste opcional para o ícone do carrinho */
+  .cart-svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  /* Ajuste opcional para o badge de contagem */
+  .cart-badge {
+    top: -5px;
+    right: -5px;
+  }
+}
